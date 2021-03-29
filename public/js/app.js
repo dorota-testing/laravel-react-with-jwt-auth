@@ -2008,16 +2008,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var lorem = 'bbb'; //const lorem = {{ config('app.name', 'Laravel') }};
 
 function Header() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("nav", {
     "class": "navbar navbar-expand-md navbar-light bg-white shadow-sm",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       "class": "container",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
         "class": "navbar-brand",
         href: "{{ url('/') }}",
-        children: " App Name"
+        children: [lorem, " App Name aa"]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
         "class": "navbar-toggler",
         type: "button",
