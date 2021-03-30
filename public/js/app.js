@@ -1924,10 +1924,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function App() {
+function App(props) {
+  var laravelGlobals = JSON.parse(props.laravelGlobals);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_Header_Header_js__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("main", {
-      "class": "py-4",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_Header_Header_js__WEBPACK_IMPORTED_MODULE_2__.default, {
+      laravelGlobals: laravelGlobals
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("main", {
+      className: "py-4",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_Example_Example_js__WEBPACK_IMPORTED_MODULE_3__.default, {})
     })]
   });
@@ -1936,7 +1939,10 @@ function App() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
 
 if (document.getElementById('app')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(App, {}), document.getElementById('app'));
+  var laravelGlobals = document.getElementById('app').getAttribute('laravelGlobals');
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(App, {
+    laravelGlobals: laravelGlobals
+  }), document.getElementById('app'));
 }
 
 /***/ }),
@@ -2008,40 +2014,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var lorem = 'bbb'; //const lorem = {{ config('app.name', 'Laravel') }};
 
-function Header() {
+function Header(props) {
+  console.log('laravelGlobals =', props);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("nav", {
-    "class": "navbar navbar-expand-md navbar-light bg-white shadow-sm",
+    className: "navbar navbar-expand-md navbar-light bg-white shadow-sm",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      "class": "container",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
-        "class": "navbar-brand",
-        href: "{{ url('/') }}",
-        children: [lorem, " App Name aa"]
+      className: "container",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+        className: "navbar-brand",
+        href: props.laravelGlobals.baseUrl,
+        children: props.laravelGlobals.appName
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-        "class": "navbar-toggler",
+        className: "navbar-toggler",
         type: "button",
         "data-toggle": "collapse",
         "data-target": "#navbarSupportedContent",
         "aria-controls": "navbarSupportedContent",
         "aria-expanded": "false",
-        "aria-label": "{{ __('Toggle navigation') }}",
+        "aria-label": "Toggle navigation",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-          "class": "navbar-toggler-icon"
+          className: "navbar-toggler-icon"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        "class": "collapse navbar-collapse",
+        className: "collapse navbar-collapse",
         id: "navbarSupportedContent",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
-          "class": "navbar-nav mr-auto"
+          className: "navbar-nav mr-auto"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
-          "class": "navbar-nav ml-auto",
+          className: "navbar-nav ml-auto",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-            "class": "nav-item",
+            className: "nav-item",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-              "class": "nav-link",
-              href: "dashboard",
+              className: "nav-link",
+              href: props.laravelGlobals.baseUrl + '/dashboard',
               children: "Login"
             })
           })

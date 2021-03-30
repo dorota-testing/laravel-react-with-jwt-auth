@@ -17,7 +17,7 @@
 
 <body>
 
-    <div id="app" data="some data"></div>
+    <div id="app" laravelGlobals="{{ $data }}"></div>
 
 </body>
 <script src="{{ asset('js/app.js') }}" defer></script>
