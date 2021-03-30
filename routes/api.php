@@ -19,9 +19,9 @@ Route::group([
     'namespace' => 'App\Http\Controllers',
     'prefix' => 'auth'
 ], function ($router) {
-    Route::post('login', [ 'as' => 'login', 'uses' => 'AuthController@login']);
-   Route::get('login', [ 'as' => 'login', 'uses' => 'AuthController@denied']);
-    Route::post('register', 'AuthController@register');
+    Route::post('login', ['as' => 'login', 'uses' => 'AuthController@login']);
+    Route::get('login', ['as' => 'login', 'uses' => 'AuthController@denied']);
+    Route::post('register', ['as' => 'register1', 'uses' => 'AuthController@register']);
     Route::post('logout', 'AuthController@logout');
     Route::get('profile', 'AuthController@profile');
     Route::post('refresh', 'AuthController@refresh');
