@@ -11,7 +11,7 @@ use Tests\TestCase;
 class UserApiTest extends TestCase
 {
     use WithFaker;
-    //use RefreshDatabase;
+    use RefreshDatabase;
 
     /**
      * This tests if anyone can register.
@@ -128,6 +128,7 @@ class UserApiTest extends TestCase
      */
     public function test_call_to_googlebooks()
     {
+        // for third party api guzzle must be used, as below
         $response = Http::get('https://www.googleapis.com/books/v1/volumes/kLAoswEACAAJ');
         //print_r($response);
         //print_r($response->json());
