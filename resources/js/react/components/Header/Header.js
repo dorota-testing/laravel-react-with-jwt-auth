@@ -3,7 +3,7 @@ import './Header.css';
 
 
 function Header(props) {
-  console.log('laravelGlobals =', props);
+  //console.log('laravelGlobals =', props);
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-white shadow-sm">
       <div className="container">

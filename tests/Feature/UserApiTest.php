@@ -11,7 +11,7 @@ use Tests\TestCase;
 class UserApiTest extends TestCase
 {
     use WithFaker;
-    use RefreshDatabase;
+    // use RefreshDatabase;
 
     /**
      * This tests if anyone can register.
@@ -138,4 +138,34 @@ class UserApiTest extends TestCase
         // var_dump('status= '.$response->status());
         $this->assertEquals($status, 200);
     }
+
+    /**
+     * This creates user, logs them in and then refreshes their token.
+     *
+     * @return void
+     */
+    public function test_can_user_refresh_token()
+    {
+        // create user
+        $user = User::factory()->create([
+            'password' => bcrypt('loremipsum')
+        ]);
+        // set user credentials
+        $userData = [
+            'email' => $user->email,
+            'password' => 'loremipsum'
+        ];
+
+        $this->withoutExceptionHandling(); //this allows showing laravel errors
+
+        // get the token
+        $loginResponse = $this->json('post', 'api/auth/login', $userData);
+        //var_dump($loginResponse->original);
+        $token = $loginResponse->original["token"];
+        //var_dump($token);
+
+        $refreshResponse = $this->json('post', 'api/auth/refresh', ["token" => $token]);
+        //var_dump($refreshResponse->original);
+        $refreshResponse->assertStatus(200);
+    }    
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use App\Models\User;
 
 class AuthController extends Controller
@@ -33,12 +34,22 @@ class AuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 400);
         }
 
-        return $this->respondWithToken($token);
+        // make refresh token
+        $refresh_token = Str::random(10);
+
+        // save refresh token in the db !!!!
+        $userId = $this->guard()->user()->id;
+        // echo ($userId);
+        $user = User::find($userId); 
+        $user->refresh_token = $refresh_token;
+        $user->save();
+
+        return $this->respondWithToken($token, $refresh_token);
     }
 
     public function denied()
     {      
-        return response()->json(["error"=>"Not authorised. Access denied"]);
+        return response()->json(["error"=>"Not authorised. Access denied"], 400);
     }
 
     public function register(Request $request)
@@ -77,12 +88,13 @@ class AuthController extends Controller
         return $this->respondWithToken($this->guard()->refresh());
     }
 
-    private function respondWithToken($token)
+    private function respondWithToken($token, $refresh_token = '')
     {
         return response()->json([
             'token' => $token,
             'token_type' => 'bearer',
-            'token_validity' => $this->guard()->factory()->getTTL() * 60
+            'token_validity' => $this->guard()->factory()->getTTL() * 60 ,
+            'refresh_token' => $refresh_token
         ]);
     }
 
