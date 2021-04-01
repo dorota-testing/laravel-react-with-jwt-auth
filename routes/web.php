@@ -13,11 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Route::get('/', function () {
-    return view('welcome');
-}); */
-Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('index');
+// this makes all urls go to react view. So it is possible to reload page
+Route::get('/{path?}', [
+    'uses' => 'App\Http\Controllers\ReactController@react',
+    'as' => 'react',
+    'where' => ['path' => '.*']
+]);
 
-//Auth::routes();
+// Auth::routes();
 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+// Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
