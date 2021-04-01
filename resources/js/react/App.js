@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
+import './App.css';
 import Header from './components/Header/Header.js';
 import Example from './components/Example/Example.js';
 import About from './components/About/About.js';
