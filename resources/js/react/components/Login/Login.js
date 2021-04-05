@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { makePostCall } from '../Utils/makeAxiosCalls.js';
 
 function Login() {
+  //window.$token = "some text";
+  //console.log('login comp: ', $token);
+
   const [message, setMessage] = useState([]);
   const [inputEmail, setInputEmail] = useState({ value: '' });
   const [inputPassword, setInputPassword] = useState({ value: '' });
@@ -31,7 +34,7 @@ function Login() {
       let objBody = { email: inputEmail.value, password: inputPassword.value }
 
       const loginRequest = await makePostCall(loginUrl, objBody);
-      // console.log('login response= ', loginRequest.token);
+      console.log('login response= ', loginRequest);
       // check if token was returned
       if (typeof loginRequest.token !== 'undefined') {
         // success!!

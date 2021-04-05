@@ -2027,14 +2027,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.css */ "./resources/js/react/App.css");
-/* harmony import */ var _components_Header_Header_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Header/Header.js */ "./resources/js/react/components/Header/Header.js");
-/* harmony import */ var _components_Example_Example_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Example/Example.js */ "./resources/js/react/components/Example/Example.js");
-/* harmony import */ var _components_About_About_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/About/About.js */ "./resources/js/react/components/About/About.js");
-/* harmony import */ var _components_Login_Login_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Login/Login.js */ "./resources/js/react/components/Login/Login.js");
-/* harmony import */ var _components_Register_Register_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Register/Register.js */ "./resources/js/react/components/Register/Register.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.css */ "./resources/js/react/App.css");
+/* harmony import */ var _components_Header_Header_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Header/Header.js */ "./resources/js/react/components/Header/Header.js");
+/* harmony import */ var _components_Example_Example_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Example/Example.js */ "./resources/js/react/components/Example/Example.js");
+/* harmony import */ var _components_About_About_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/About/About.js */ "./resources/js/react/components/About/About.js");
+/* harmony import */ var _components_Login_Login_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Login/Login.js */ "./resources/js/react/components/Login/Login.js");
+/* harmony import */ var _components_Register_Register_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Register/Register.js */ "./resources/js/react/components/Register/Register.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -2049,36 +2050,36 @@ __webpack_require__.r(__webpack_exports__);
 
 function App(props) {
   var laravelGlobals = JSON.parse(props.laravelGlobals);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.BrowserRouter, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Header_Header_js__WEBPACK_IMPORTED_MODULE_4__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.BrowserRouter, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Header_Header_js__WEBPACK_IMPORTED_MODULE_3__.default, {
         laravelGlobals: laravelGlobals
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Switch, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Switch, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
         exact: true,
         path: "/",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("main", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("main", {
           className: "py-4",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Example_Example_js__WEBPACK_IMPORTED_MODULE_5__.default, {})
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Example_Example_js__WEBPACK_IMPORTED_MODULE_4__.default, {})
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Route, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
         path: "/about",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("main", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("main", {
           className: "py-4",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_About_About_js__WEBPACK_IMPORTED_MODULE_6__.default, {})
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_About_About_js__WEBPACK_IMPORTED_MODULE_5__.default, {})
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Route, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
         path: "/login",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("main", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("main", {
           className: "py-4",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Login_Login_js__WEBPACK_IMPORTED_MODULE_7__.default, {})
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Login_Login_js__WEBPACK_IMPORTED_MODULE_6__.default, {})
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Route, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
         path: "/register",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("main", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("main", {
           className: "py-4",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_Register_Register_js__WEBPACK_IMPORTED_MODULE_8__.default, {})
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_Register_Register_js__WEBPACK_IMPORTED_MODULE_7__.default, {})
         })
       })]
     })]
@@ -2089,7 +2090,7 @@ function App(props) {
 
 if (document.getElementById('app')) {
   var laravelGlobals = document.getElementById('app').getAttribute('laravelGlobals');
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(App, {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(App, {
     laravelGlobals: laravelGlobals
   }), document.getElementById('app'));
 }
@@ -2293,6 +2294,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Login() {
+  //window.$token = "some text";
+  //console.log('login comp: ', $token);
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       message = _useState2[0],
@@ -2350,7 +2353,7 @@ function Login() {
               }
 
               setMessage(validation);
-              _context.next = 12;
+              _context.next = 13;
               break;
 
             case 6:
@@ -2365,9 +2368,8 @@ function Login() {
 
             case 10:
               loginRequest = _context.sent;
+              console.log('login response= ', loginRequest); // check if token was returned
 
-              // console.log('login response= ', loginRequest.token);
-              // check if token was returned
               if (typeof loginRequest.token !== 'undefined') {
                 // success!!
                 // save token in memory
@@ -2397,7 +2399,7 @@ function Login() {
                 });
               }
 
-            case 12:
+            case 13:
             case "end":
               return _context.stop();
           }
