@@ -1,8 +1,26 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useAppContext } from "../../libs/contextLib";
+
 
 function Header(props) {
   //console.log('laravelGlobals =', props);
+
+  const { globals } = useAppContext();
+  const { setGlobals } = useAppContext();
+  function handleLogout() {
+    //e.preventDefault();
+    // make api call to log out
+
+    setGlobals({
+      'authenticated': false,
+      'token': '',
+      'token_exp': '',
+      'refresh_token': '',
+      'refresh_token_exp': '',
+    });
+  }
+
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-white shadow-sm">
       <div className="container">
@@ -14,14 +32,19 @@ function Header(props) {
           <ul className="navbar-nav mr-auto">
             <NavLink to="/about" activeClassName="active">About</NavLink>
           </ul>
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/login" activeClassName="active">Login</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/register" activeClassName="active">Register</NavLink>
-            </li>
-          </ul>
+          {globals.authenticated ? (
+            <a className="nav-link" onClick={handleLogout}>Logout</a>
+          ) : (
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/login" activeClassName="active">Login</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/register" activeClassName="active">Register</NavLink>
+              </li>
+            </ul>
+          )}
+
         </div>
       </div>
     </nav>

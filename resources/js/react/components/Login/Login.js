@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { makePostCall } from '../Utils/makeAxiosCalls.js';
+import { useAppContext } from "../../libs/contextLib";
+import { useHistory } from "react-router-dom";
+
 
 function Login() {
-  //window.$token = "some text";
-  //console.log('login comp: ', $token);
+  //const { userHasAuthenticated } = useAppContext();
+  const { setGlobals } = useAppContext();
+  const history = useHistory();
 
   const [message, setMessage] = useState([]);
   const [inputEmail, setInputEmail] = useState({ value: '' });
@@ -38,7 +42,14 @@ function Login() {
       // check if token was returned
       if (typeof loginRequest.token !== 'undefined') {
         // success!!
-        // save token in memory
+        
+        setGlobals({
+        'authenticated':true, 
+        'token':loginRequest.token, 
+        'token_exp':loginRequest.token_validity
+      });
+        console.log('logged in');
+        
         // save refresh_token in http cookie
         // save logged_in flag in local storage
         // change view to users dashboard
@@ -47,6 +58,8 @@ function Login() {
         setMessage([]);
         setInputEmail({ value: '', css: '' });
         setInputPassword({ value: '', css: '' });
+
+        history.push("/dashboard");
       } else {
         // error
         setMessage(['Login error. Make sure to enter correct email and password.']);
